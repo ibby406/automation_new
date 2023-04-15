@@ -9,8 +9,6 @@ public class AI07_testcases extends ReusableAnnotations {
 
         @Test
         //verify error message appears for incorrect zipcode format
-        //
-        //
 public void zipcodeErrorMessage() throws InterruptedException {
             //navigate to huntington bank webpage
             driver.navigate().to("https://www.huntington.com/");
@@ -25,7 +23,7 @@ public void zipcodeErrorMessage() throws InterruptedException {
             //click update button
             ReusableMethods_Logger.clickMethod(driver, "//*[text()='Update']", logger, "zipcode update button");
             //get text of incorrect zipcode error message
-            String result = ReusableMethods_Logger.captureTextMethod(driver, "//*[@id='zip-code-update-error']", logger, "zipcode error message");
+            //String result = ReusableMethods_Logger.captureTextMethod(driver, "//*[@id='zip-code-update-error']", logger, "zipcode error message");
             Thread.sleep(2000);
         } // end of zipcode error test case
 
