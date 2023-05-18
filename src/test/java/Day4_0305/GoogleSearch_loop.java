@@ -20,8 +20,8 @@ public class GoogleSearch_loop {
         //setup arraylist of cars
         ArrayList <String> cars = new ArrayList<>();
         cars.add("BMW");
-        cars.add("Mercedes");
-        cars.add("Audi");
+        //cars.add("Mercedes");
+        //cars.add("Audi");
 
         //iterate through list of cars and print out search number for each car
         for(int i=0; i < cars.size();i++){
@@ -31,7 +31,7 @@ public class GoogleSearch_loop {
             Thread.sleep(2000);
 
             //enter keyword bmw to search fiels
-            driver.findElement(By.xpath("//*[@name='q']")).sendKeys(cars.get(i));
+            driver.findElement(By.xpath("//*[@name='q'] and ([@id='APjFqb']")).sendKeys(cars.get(i));
 
             //click on google search button
             driver.findElement(By.xpath("//*[@name='btnK']")).submit();
@@ -39,9 +39,9 @@ public class GoogleSearch_loop {
             //whenever you go to a new page or navigate, always use 2-3 seconds wait to pause your script a bit
             Thread.sleep(2000);
 
-            //capture the search results using .getText()
+           // capture the search results using .getText()
             String result = driver.findElement(By.xpath("//*[@id='result-stats']")).getText();
-            //System.out.println("Search results: " + result);
+            System.out.println("Search results: " + result);
 
 
             //print out only the number

@@ -14,6 +14,7 @@ public class actionitem {
         while (i<region.length){
             System.out.println("My region is: " + region[i] + " and my area code is: " + areaCode[i]);
             i++;
+            //hello
         }
 
 
